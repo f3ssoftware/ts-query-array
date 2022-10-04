@@ -1,0 +1,11 @@
+{
+    "name": "ts-query-array",
+    "version": "1.0.0",
+    "description": "Array operations",
+    "main": "index.ts",
+    "type": "commonjs",
+    "types": "dist/index.d.ts",
+    "files": [
+      "/dist"
+    ]
+  }
