@@ -7,5 +7,12 @@
     "types": "dist/index.d.ts",
     "files": [
       "/dist"
+    ],
+    "keywords": [
+      "f3ssoftware",
+      "array",
+      "query-array",
+      "typescript",
+      "sql-array"
     ]
   }
