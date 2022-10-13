@@ -1,6 +1,12 @@
 export class QueryArray<T> {
   constructor(public array: T[]) {}
 
+  /**
+   * Sort the array by a key
+   * @param {string} key - Name of the key at object to sort
+   * @param order - Ascending or Descending order to sort
+   * @returns 
+   */
   public sort(key: string, order: SortOrder) {
     switch (order) {
       case SortOrder.ASC:
@@ -9,7 +15,6 @@ export class QueryArray<T> {
           if (a[key] > b[key]) return 1;
           return 0;
         });
-        break;
       case SortOrder.DESC:
         return this.array.sort((a, b) => {
           if (a[key] > b[key]) return -1;
@@ -19,6 +24,11 @@ export class QueryArray<T> {
     }
   }
 
+  /**
+   * 
+   * @param where - Specific object where clause to be searched into array 
+   * @returns 
+   */
   public where(where: any) {
     const keys = Object.keys(where);
     const filtered = [];
